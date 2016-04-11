@@ -1,0 +1,207 @@
+@import "base.scss";
+
+.wrapper{@include r;}
+.top{
+	@include f(100%,2.3vw);
+	background-color: #303030;
+	z-index: 9;
+	.topin{
+		width: 100%;
+		max-width: 1350px;
+		height:2.3vw;
+		margin: auto;
+	}
+	.menubtn{display: none;}
+	.logo{
+		@include r(4.5%,100%);	
+		margin-left: 6%;	
+		background: url(../images/logo.jpg) no-repeat;
+		background-size: contain;
+		a{@include a;}
+	}
+	.menubg{display: none;}
+	.menu{
+		@include r(60%,100%);
+		text-align: center;
+		display: block;
+		.menuBox{
+			position: relative;
+			display: inline-block;
+			width: auto;
+			height: 1vw;
+			margin-top: 0.6vw;
+			padding-right: 1vw;			
+			margin-right: 1vw;
+			background: url(../images/menubar.jpg) repeat-y;
+			background-position: right top;
+			&:last-child{background: none;}			
+			.menua{
+				@include r(auto,1vw);
+				@include font(1vw,1vw,#FFF);
+				padding: 0 10px;
+			}
+			.s_menuBox{
+				@include a(100%,auto,-1vw,1vw);
+				transition:0.3s;
+				padding-top: 0.7vw;
+				display: none;
+				.s_menuBoxin{
+					@include r;					
+					a{
+						@include r(100%,1vw);
+						@include font(1vw,1vw,#FFF);						
+						text-align: center;
+						padding: 0.5vw;
+						background-color: rgba(48,48,48,0.5);
+					}
+				}
+
+			}
+		}
+	}
+	.lag{
+		@include r(10.5%,60%);
+		margin-left: 3%;
+		top: 20%;
+		a{
+			@include r(45%,100%);
+			@include font(12px,1.3vw,#FFF);
+			@include border-radius(1vw);
+			box-sizing:border-box;
+			border:1px solid #fff;			
+			margin-right: 5%;
+			text-align: center;			
+		}
+	}
+	.searchBox{
+		@include r(15.1%,70%);
+		@include border-radius(0.5vw);		
+		top:15%;
+		box-shadow:inset 3px 3px 5px rgba(0,0,0,0.8);
+		background-color: #303030;
+		input{@include r(100%,100%);@include font(12px,1.9vw,#FFF);text-indent: 15px;letter-spacing: 1px;}
+	}
+}
+.content{@include r;margin-top: 2.3vw;}
+.banner{
+	@include r;
+	z-index: 0;
+	.pica{
+		position: relative;
+		cursor:move;
+		&:before{
+			content:"";
+			@include a;
+			z-index: 99;
+		}
+	}
+	.word{
+		@include a(auto,auto,50%,50%);
+		@include font(62.5px,75px,#545454);
+		letter-spacing: 1px;
+		text-align: center;
+		z-index: 1;
+		span{
+			font-size: 100px;
+			margin-right: 10px;
+		}
+		&.w1{
+			margin-top: -165px;
+			margin-left: -355px;
+		}
+		&.w2{
+			margin-top: -165px;
+			margin-left: -455px;
+		}
+		&.w3{
+			margin-top: -235px;
+			margin-left: -495px;
+		}
+		&.w4{
+			margin-top: 185px;
+			margin-left: -505px;
+		}
+		&.w5{
+			margin-top: -225px;
+			margin-left: -440px;			
+		}
+		&.w6{
+			margin-top: 80px;
+			margin-left: -460px;
+		}
+	}
+	.pic{@include r;overflow: hidden;}
+}
+.VdNews{
+	@include r;
+	border-top:5px solid #FFF;
+	border-bottom:5px solid #FFF;
+	background-color: #f9f9f9;
+	.VdNewsin{width:100%;max-width: 1525px;margin: auto;}
+	.video{
+		@include r(50.2%,0);
+		padding-bottom: 26.7%;
+		box-sizing:border-box;
+		border-right: 5px solid #FFF;
+		border-left: 5px solid #FFF;
+		.word{
+			@include a;
+			@include font(21px,30px,#FFF);
+			text-align: center;
+			z-index: 9;
+			box-sizing:border-box;
+			padding: 12vw 10% 0 10%;
+			background-color: rgba(0,0,0,0.8);
+			transition:0.3s;
+			opacity: 0;
+			&.on{opacity: 1;}
+		}
+		.btn{
+			@include a;
+			transition:0.3s;
+			z-index: 10;
+			cursor: pointer;
+			opacity: 0;
+			&.on{opacity: 1;}
+			.playbtn{
+				@include a(252px,60px,50%,85px,-126px);
+				@include font(30px,50px,#fff);
+				@include border-radius(30px);	
+				box-sizing:border-box;			
+				z-index: 1;
+				text-indent: 45px;
+				border:5px solid #FFF;								
+				&:before{
+					@include a(90%,80%,auto,10%);
+					right: 3%;
+					content:"";
+					background: url(../images/play_btn.png) no-repeat;
+					background-size: contain;
+					background-position: right top;
+				}
+			}
+		}
+		
+		#player{
+			@include a;
+			z-index: 0;
+		}
+	}
+	.news{
+		@include r(49.8%);
+		box-sizing:border-box;
+		border-right: 5px solid #FFF;
+		.word{
+			@include a(auto,auto,50%,50%,90px,-100px);
+			@include font(30px,30px,#707070);
+			z-index:9;
+			text-align: center;
+			span{@include font(20px,20px,#707070);}
+		}
+		.bg{
+			@include r;
+			img{width: 100%;}
+		}
+	}
+}
+.footer{@include r(100%,4vw);background-color: #f9f9f9;}
